@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - SerenityLinks</title>
+  <link rel="stylesheet" href="about.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-original">
+
+       <!-- Background Video -->
+    <video autoplay muted loop id="bgVideo">
+        <source src='../homepage/videos/background_home.mp4' type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Video Overlay -->
+    <div class="video-overlay"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="brand"><i class="fas fa-heart"></i> SerenityLinks</span>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Whisper Walls</a></li>
+      <li><a href="#">Friendship Hub</a></li>
+      <li><a href="#">LoveOS</a></li>
+      <li><a href="#">Games & Pets</a></li>
+      <li><a href="#" class="active">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="themeToggle"><i class="fas fa-adjust"></i></button>
+      <div id="themeSelector" class="theme-selector hidden">
+        <button data-theme="original">Original Cozy</button>
+        <button data-theme="pixel">Pixel Cozy</button>
+        <button data-theme="night">Night Mode</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section class="about">
+      <h1>About SerenityLinks</h1>
+      <p>
+        We believe that digital communication should be as rich, nuanced, and emotionally fulfilling as face-to-face conversation. Our platform analyzes the subtle patterns in how you communicate online to help you build deeper, more authentic relationships.
+      </p>
+      <div class="mission">
+        <span><i class="fas fa-star"></i></span>
+        <h2>Our Mission</h2>
+        <p>
+          To create a digital space where emotions are understood, connections are meaningful, and every interaction feels warm and authentic. We're bridging the gap between digital communication and human emotion.
+        </p>
+      </div>
+    </section>
+
+    <section class="features">
+      <h2>How Digital Body Language Works</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <span class="feature-icon"><i class="fas fa-brain"></i></span>
+          <h3>Digital Body Language Analysis</h3>
+          <p>Our advanced AI analyzes typing patterns, response times, and interaction styles to understand your emotional state and communication preferences.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon"><i class="fas fa-shield-alt"></i></span>
+          <h3>Privacy & Safety First</h3>
+          <p>Your data is encrypted end-to-end. We analyze patterns without storing personal content. You control what you share and when.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon"><i class="fas fa-heart"></i></span>
+          <h3>Emotional Intelligence</h3>
+          <p>Learn to better understand and express emotions in digital spaces. Develop deeper, more meaningful online relationships.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon"><i class="fas fa-users"></i></span>
+          <h3>Community Connection</h3>
+          <p>Connect with like-minded souls who value authentic communication and emotional depth in digital interactions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="privacy">
+      <h2>Privacy & Safety</h2>
+      <div class="privacy-grid">
+        <div class="privacy-card">
+          <span class="privacy-icon"><i class="fas fa-eye-slash"></i></span>
+          <h3>Anonymity Protection</h3>
+          <p>Your identity is protected in anonymous features like Whisper Walls.</p>
+        </div>
+        <div class="privacy-card">
+          <span class="privacy-icon"><i class="fas fa-lock"></i></span>
+          <h3>Consent-Based Sharing</h3>
+          <p>You decide what to share and with whom. No forced connections.</p>
+        </div>
+        <div class="privacy-card">
+          <span class="privacy-icon"><i class="fas fa-heart"></i></span>
+          <h3>Emotional Safety</h3>
+          <p>Moderated spaces with community guidelines that prioritize kindness.</p>
+        </div>
+        <div class="privacy-card">
+          <span class="privacy-icon"><i class="fas fa-chart-line"></i></span>
+          <h3>Data Transparency</h3>
+          <p>Clear information about how your data is used and analyzed.</p>
+        </div>
+      </div>
+      <div class="control">
+        <h3>Complete Control</h3>
+        <p>You can pause analysis, delete your data, or adjust privacy settings at any time. We believe transparency and control are fundamental to digital trust.</p>
+        <button class="privacy-btn">View Privacy Settings</button>
+      </div>
+    </section>
+
+    <section class="themes">
+      <h2>Experience Our Themes</h2>
+      <div class="themes-grid">
+        <div class="theme-card" data-theme="original">
+          <div class="theme-preview original"></div>
+          <h3>Original Cozy</h3>
+          <p>Soft pastels, gentle curves, and warm gradients that feel like a digital hug</p>
+        </div>
+        <div class="theme-card" data-theme="pixel">
+          <div class="theme-preview pixel"></div>
+          <h3>Pixel Cozy</h3>
+          <p>Retro pixel vibes with playful fonts and nostalgic gaming aesthetics</p>
+        </div>
+        <div class="theme-card" data-theme="night">
+          <div class="theme-preview night"></div>
+          <h3>Night Mode</h3>
+          <p>Dark elegance with neon highlights and glowing accents for evening browsing</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span><i class="fas fa-heart"></i> SerenityLinks</span> &copy; 2025. All rights reserved. Made with love.
+  </footer>
+  <script src="about.js"></script>
+</body>
+</html>

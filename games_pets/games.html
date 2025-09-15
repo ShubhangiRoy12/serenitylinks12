@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SerenityLinks - Mindful Games & Digital Pets</title>
+    <link rel="stylesheet" href="games.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+      <!-- Background Video -->
+    <video autoplay muted loop id="bgVideo">
+        <source src='../homepage/videos/background_home.mp4' type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Video Overlay -->
+    <div class="video-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-heart nav-logo"></i>
+                <span>SerenityLinks</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#" class="nav-item"><i class="fas fa-home"></i> Home</a>
+                <a href="#" class="nav-item"><i class="fas fa-chart-bar"></i> Dashboard</a>
+                <a href="#" class="nav-item"><i class="fas fa-comments"></i> Whisper Walls</a>
+                <a href="#" class="nav-item"><i class="fas fa-users"></i> Friendship Hub</a>
+                <a href="#" class="nav-item"><i class="fas fa-heart"></i> LoveOS</a>
+                <a href="#" class="nav-item active"><i class="fas fa-gamepad"></i> Games & Pets</a>
+                <a href="#" class="nav-item"><i class="fas fa-info-circle"></i> About</a>
+            </div>
+            <div class="nav-profile">
+                <div class="profile-icons">
+                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <header class="page-header">
+            <h1>Games & Digital Pets</h1>
+            <p>Nurture your digital companion and play heartwarming games that build emotional connections</p>
+        </header>
+
+        <!-- Content Grid -->
+        <div class="content-grid">
+            <!-- Digital Companion Section -->
+            <section class="companion-section">
+                <h2>Your Digital Companion</h2>
+                <div class="companion-card">
+                    <div class="pet-display">
+                        <div class="pet-avatar" id="petAvatar">
+                            <div class="pet-level" id="petLevel">12</div>
+                            <div class="pet-face">
+                                <div class="pet-eyes">
+                                    <div class="eye"></div>
+                                    <div class="eye"></div>
+                                </div>
+                                <div class="pet-mouth"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pet-info">
+                        <h3>Serenity</h3>
+                        <p>Your faithful digital companion</p>
+                    </div>
+                    <div class="pet-stats">
+                        <div class="stat">
+                            <span class="stat-label">Happiness</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill happiness" id="happinessBar" style="width: 85%"></div>
+                            </div>
+                            <span class="stat-value" id="happinessValue">85%</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Energy</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill energy" id="energyBar" style="width: 72%"></div>
+                            </div>
+                            <span class="stat-value" id="energyValue">72%</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Love</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill love" id="loveBar" style="width: 90%"></div>
+                            </div>
+                            <span class="stat-value" id="loveValue">90%</span>
+                        </div>
+                    </div>
+                    <div class="pet-actions">
+                        <button class="pet-btn" onclick="feedPet()"><i class="fas fa-utensils"></i> Feed</button>
+                        <button class="pet-btn" onclick="playWithPet()"><i class="fas fa-gamepad"></i> Play</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Achievements Section -->
+            <section class="achievements-section">
+                <h2>Achievements</h2>
+                <div class="achievements-grid">
+                    <div class="achievement unlocked">
+                        <div class="achievement-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="achievement-info">
+                            <h4>First Connection</h4>
+                            <p>Made your first friend</p>
+                        </div>
+                        <div class="achievement-trophy">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                    </div>
+                    <div class="achievement unlocked">
+                        <div class="achievement-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="achievement-info">
+                            <h4>Emotion Master</h4>
+                            <p>Scored 100% on emotion quiz</p>
+                        </div>
+                        <div class="achievement-trophy">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                    </div>
+                    <div class="achievement unlocked">
+                        <div class="achievement-icon">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <div class="achievement-info">
+                            <h4>Pet Whisperer</h4>
+                            <p>Reached level 10 with your pet</p>
+                        </div>
+                        <div class="achievement-trophy">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                    </div>
+                    <div class="achievement locked">
+                        <div class="achievement-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="achievement-info">
+                            <h4>Community Builder</h4>
+                            <p>Helped 50 people feel better</p>
+                        </div>
+                        <div class="achievement-lock">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="achievement locked">
+                        <div class="achievement-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="achievement-info">
+                            <h4>Digital Empath</h4>
+                            <p>Perfect empathy score for a week</p>
+                        </div>
+                        <div class="achievement-lock">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Games Section -->
+        <section class="games-section">
+            <h2>Mini Games</h2>
+            <div class="games-grid">
+                <!-- Mood Decoder Quiz -->
+                <div class="game-card">
+                    <div class="game-header">
+                        <div class="game-icon mood-decoder">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="game-difficulty">
+                            <span class="difficulty-label">Easy</span>
+                            <span class="points">+50 pts</span>
+                        </div>
+                    </div>
+                    <div class="game-content">
+                        <h3>Mood Decoder Quiz</h3>
+                        <p>Test your ability to read digital emotions and body language from chat snippets and voice clips</p>
+                        <button class="play-btn" onclick="startGame('mood-decoder')">
+                            <i class="fas fa-play"></i> Play Now
+                        </button>
+                    </div>
+                </div>
+
+                    <!-- Scroll Race -->
+                <div class="game-card">
+                    <div class="game-header">
+                        <div class="game-icon scroll-race">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <div class="game-difficulty">
+                            <span class="difficulty-label">Medium</span>
+                            <span class="points">+100 pts</span>
+                        </div>
+                    </div>
+                    <div class="game-content">
+                        <h3>Scroll Race</h3>
+                        <p>Navigate through emotional landscapes in this endless runner with precision tracking</p>
+                        <button class="play-btn" 
+                                <a href="scroll_game/scrollrace.html" class="play-btn">
+            <i class="fas fa-play"></i> Play Now
+        </a>
+                            <i class="fas fa-play"></i> Play Now
+                        </button>
+                    </div>
+
+                </div>
+
+
+
+                <!-- Personality Jigsaw -->
+                <div class="game-card">
+                    <div class="game-header">
+                        <div class="game-icon personality-jigsaw">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <div class="game-difficulty">
+                            <span class="difficulty-label">Hard</span>
+                            <span class="points">+200 pts</span>
+                        </div>
+                    </div>
+                    <div class="game-content">
+                        <h3>Personality Jigsaw</h3>
+                        <p>Match personality types and build meaningful relationships through pattern recognition</p>
+                        <button class="play-btn" onclick="startGame('personality-jigsaw')">
+                            <i class="fas fa-play"></i> Play Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Whisper Wall Scavenger Hunt -->
+                <div class="game-card">
+                    <div class="game-header">
+                        <div class="game-icon scavenger-hunt">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="game-difficulty">
+                            <span class="difficulty-label">Expert</span>
+                            <span class="points">+300 pts</span>
+                        </div>
+                    </div>
+                    <div class="game-content">
+                        <h3>Whisper Wall Scavenger Hunt</h3>
+                        <p>Decode anonymous messages and solve location-based riddles for emotional rewards</p>
+                        <button class="play-btn" onclick="startGame('scavenger-hunt')">
+                            <i class="fas fa-play"></i> Play Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mini Pets -->
+                <div class="game-card">
+                    <div class="game-header">
+                        <div class="game-icon mini-pets">
+                            <i class="fas fa-cat"></i>
+                        </div>
+                        <div class="game-difficulty">
+                            <span class="difficulty-label">Easy</span>
+                            <span class="points">+75 pts</span>
+                        </div>
+                    </div>
+                    <div class="game-content">
+                        <h3>Mini Pets</h3>
+                        <p>Emotion-responsive virtual pets that react to user mood, earn coins through care interactions</p>
+                        <button class="play-btn" onclick="startGame('mini-pets')">
+                            <i class="fas fa-play"></i> Play Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leaderboard Section -->
+        <section class="leaderboard-section">
+            <h2>Community Leaderboard</h2>
+            <div class="leaderboard">
+                <div class="leaderboard-item rank-1">
+                    <div class="rank">1</div>
+                    <div class="player-info">
+                        <h4>CozyHeart92</h4>
+                        <p>Level 25</p>
+                    </div>
+                    <div class="score">
+                        <i class="fas fa-heart score-icon"></i>
+                        <span>2840 points</span>
+                    </div>
+                </div>
+                <div class="leaderboard-item rank-2">
+                    <div class="rank">2</div>
+                    <div class="player-info">
+                        <h4>EmpatheticSoul</h4>
+                        <p>Level 24</p>
+                    </div>
+                    <div class="score">
+                        <i class="fas fa-star score-icon"></i>
+                        <span>2750 points</span>
+                    </div>
+                </div>
+                <div class="leaderboard-item rank-3">
+                    <div class="rank">3</div>
+                    <div class="player-info">
+                        <h4>DigitalHugger</h4>
+                        <p>Level 23</p>
+                    </div>
+                    <div class="score">
+                        <i class="fas fa-smile score-icon"></i>
+                        <span>2690 points</span>
+                    </div>
+                </div>
+                <div class="leaderboard-item">
+                    <div class="rank">4</div>
+                    <div class="player-info">
+                        <h4>WarmConnection</h4>
+                        <p>Level 22</p>
+                    </div>
+                    <div class="score">
+                        <i class="fas fa-sparkles score-icon"></i>
+                        <span>2580 points</span>
+                    </div>
+                </div>
+                <div class="leaderboard-item rank-you">
+                    <div class="rank">5</div>
+                    <div class="player-info">
+                        <h4>You</h4>
+                        <p>Level 21</p>
+                    </div>
+                    <div class="score">
+                        <i class="fas fa-heart score-icon"></i>
+                        <span>2420 points</span>
+                    </div>
+                </div>
+            </div>
+            <button class="view-full-btn">View Full Leaderboard</button>
+        </section>
+    </main>
+
+    <!-- Game Modal -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="gameContent"></div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

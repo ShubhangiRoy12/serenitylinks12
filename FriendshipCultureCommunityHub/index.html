@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Friendship & Culture — Community Hub</title>
+  <meta name="description" content="Friendship & Culture Hub with pink theme UI." />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">FC</div>
+      <div>
+        <h1>Friendship & Culture — Community Hub</h1>
+        <p class="lead">Safe, meaningful friendships & cultural bonding around shared regions, interests and styles.</p>
+      </div>
+    </header>
+
+       <!-- Background Video -->
+    <video autoplay muted loop id="bgVideo">
+        <source src='../homepage/videos/background_home.mp4' type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Video Overlay -->
+    <div class="video-overlay"></div>
+
+    <nav class="main-nav">
+      <a href="#">Home</a>
+      <a href="#">Groups</a>
+      <a href="#">Events</a>
+      <a href="#">Media</a>
+      <a href="#">Resources</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <!-- Stats Section Start -->
+    <section class="stats-section">
+      <div class="stat-card">
+        <div class="stat-icon"><span>👥</span></div>
+        <div class="stat-number">24</div>
+        <div class="stat-label">Active Communities</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><span>📅</span></div>
+        <div class="stat-number">15</div>
+        <div class="stat-label">Weekly Events</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><span>🌐</span></div>
+        <div class="stat-number">67</div>
+        <div class="stat-label">Countries</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><span>💗</span></div>
+        <div class="stat-number">3.2K</div>
+        <div class="stat-label">Connections Made</div>
+      </div>
+    </section>
+    <!-- Stats Section End -->
+
+    <main class="grid">
+      <section class="features-section">
+        <!-- Community Section -->
+        <div class="card community-card">
+          <h3>Community</h3>
+          <p class="small">Join a vibrant, inclusive community where everyone is welcome. Share your culture, celebrate
+            diversity, and make new friends from all walks of life.</p>
+          <div class="feature">
+            <div class="icon">🌍</div>
+            <div class="feature-details">
+              <strong>Diverse Cultures</strong>
+              <div class="small muted">Connect with people from different backgrounds and regions.</div>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="icon">🎉</div>
+            <div class="feature-details">
+              <strong>Events & Festivals</strong>
+              <div class="small muted">Participate in cultural events, festivals, and celebrations together.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Friendship Section -->
+        <div class="card friendship-card">
+          <h3>Friendship</h3>
+          <p class="small">Build lasting friendships through shared interests, group activities, and meaningful
+            conversations in a safe and supportive environment.</p>
+          <div class="feature">
+            <div class="icon">🤝</div>
+            <div class="feature-details">
+              <strong>Group Matching</strong>
+              <div class="small muted">Find friends who share your interests and values.</div>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="icon">🔒</div>
+            <div class="feature-details">
+              <strong>Safe Chat Rooms</strong>
+              <div class="small muted">Enjoy secure, moderated conversations and group chats.</div>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="icon">🎲</div>
+            <div class="feature-details">
+              <strong>Fun Activities</strong>
+              <div class="small muted">Join polls, quizzes, games, and interactive group activities.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Groups Section -->
+        <div class="card groups-card">
+          <h3>Suggested Groups</h3>
+          <p class="small muted">Based on your interests & style.</p>
+          <div class="groups" id="groupsList"></div>
+          <div class="more-groups">
+            <h4>Popular Groups</h4>
+            <ul>
+              <li>🌱 Eco Warriors</li>
+              <li>🎨 Art & Creativity</li>
+              <li>🎮 Gamers United</li>
+              <li>🍲 Foodies & Chefs</li>
+              <li>📚 Book Lovers</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <div class="card">
+          <div class="section-title">
+            <h4>Upcoming Events</h4><a href="#" class="small muted">See all</a>
+          </div>
+          <div class="event">
+            <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b3029?q=80&w=400" alt="Event">
+            <div>
+              <div class="event-title">Cultural Movie Night</div>
+              <div class="small muted">Oct 25 · 8:00 PM · Community Center</div>
+              <div class="rsvp-container"><a class="btn alt" href="#">RSVP</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card member-spotlight-card">
+          <h4>Member Spotlight</h4>
+          <div class="member-profile">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Member">
+            <div>
+              <strong>Asha Patel</strong>
+              <div class="small muted">Host · Language Exchange</div>
+              <p class="small">"I love connecting cultures through language and food!"</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card resources-card">
+          <h4>Learning Resources</h4>
+          <ul class="small muted">
+            <li><a href="#">How to Start a Group</a></li>
+            <li><a href="#">Event Hosting Tips</a></li>
+            <li><a href="#">Community Guidelines</a></li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <section class="testimonials">
+      <h3>What Members Say</h3>
+      <div class="testimonial-list">
+        <div class="testimonial">
+          <p>"I've made lifelong friends here and learned so much about different cultures!"</p>
+          <div class="small muted">— Mateo R.</div>
+        </div>
+        <div class="testimonial">
+          <p>"The events are always fun and inclusive. Highly recommend!"</p>
+          <div class="small muted">— Priya S.</div>
+        </div>
+        <div class="testimonial">
+          <p>"A safe space to share and grow together."</p>
+          <div class="small muted">— Chen W.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="small muted">Prototype UI — not final product.</div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a> ·
+        <a href="#">Terms of Service</a> ·
+        <a href="#">Contact Us</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

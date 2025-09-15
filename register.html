@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join SerenityLinks - Registration</title>
+    <link rel="stylesheet" href="register-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="floating-hearts">
+        <div class="heart">💖</div>
+        <div class="heart">🌸</div>
+        <div class="heart">🦋</div>
+        <div class="heart">💕</div>
+        <div class="heart">🌺</div>
+        <div class="heart">✨</div>
+        <div class="heart">🌙</div>
+        <div class="heart">🌼</div>
+    </div>
+
+       <!-- Background Video -->
+    <video autoplay muted loop id="bgVideo">
+        <source src='../homepage/videos/background_home.mp4' type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Video Overlay -->
+    <div class="video-overlay"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-heart"></i>
+            <span>SerenityLinks</span>
+        </div>
+        <div class="nav-actions">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            <a href="login.html" class="login-link">Already have an account? Login</a>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-steps">
+                <div class="step active" data-step="1">
+                    <div class="step-circle">1</div>
+                    <div class="step-label">Basic Info</div>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="step-circle">2</div>
+                    <div class="step-label">Personal Details</div>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-circle">3</div>
+                    <div class="step-label">Interests</div>
+                </div>
+                <div class="step" data-step="4">
+                    <div class="step-circle">4</div>
+                    <div class="step-label">Personality Quiz</div>
+                </div>
+                <div class="step" data-step="5">
+                    <div class="step-circle">5</div>
+                    <div class="step-label">Complete</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="form-container">
+            <form id="registrationForm" class="registration-form">
+                
+                <!-- Step 1: Basic Information -->
+                <div class="form-step active" data-step="1">
+                    <div class="step-header">
+                        <h2>Welcome to SerenityLinks! 🌸</h2>
+                        <p>Let's start with some basic information about you</p>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                            <div class="field-feedback"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            <div class="field-feedback"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password <span class="required">*</span></label>
+                            <input type="password" id="password" name="password" placeholder="Create a secure password" required>
+                            <div class="password-strength"></div>
+                            <div class="field-feedback"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password <span class="required">*</span></label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                            <div class="field-feedback"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Personal Details -->
+                <div class="form-step" data-step="2">
+                    <div class="step-header">
+                        <h2>Tell us more about yourself 💫</h2>
+                        <p>This helps us create a personalized experience for you</p>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="dateOfBirth">Date of Birth <span class="required">*</span></label>
+                            <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                            <div class="field-feedback"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+1 (555) 123-4567" required>
+                            <div class="field-feedback"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="gender">Gender (Optional)</label>
+                            <select id="gender" name="gender">
+                                <option value="">Prefer not to say</option>
+                                <option value="female">Female</option>
+                                <option value="male">Male</option>
+                                <option value="non-binary">Non-binary</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="location">Location (Optional)</label>
+                            <input type="text" id="location" name="location" placeholder="City, Country">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Interests & Hobbies -->
+                <div class="form-step" data-step="3">
+                    <div class="step-header">
+                        <h2>What brings you joy? 🌺</h2>
+                        <p>Select your hobbies and interests to find like-minded people</p>
+                    </div>
+                    
+                    <div class="interests-section">
+                        <h3>Hobbies & Activities</h3>
+                        <div class="interests-grid">
+                            <label class="interest-tag">
+                                <input type="checkbox" name="hobbies" value="reading">
+                                <span><i class="fas fa-book"></i> Reading</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="hobbies" value="music">
+                                <span><i class="fas fa-music"></i> Music</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="hobbies" value="art">
+                                <span><i class="fas fa-palette"></i> Art & Drawing</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="hobbies" value="cooking">
+                                <span><i class="fas fa-utensils"></i> Cooking</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="hobbies" value="gaming">
+                                <span><i class="fas fa-gamepad"></i> Gaming</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="hobbies" value="photography">
+                                <span><i class="fas fa-camera"></i> Photography</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="hobbies" value="traveling">
+                                <span><i class="fas fa-plane"></i> Traveling</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="hobbies" value="fitness">
+                                <span><i class="fas fa-dumbbell"></i> Fitness</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="hobbies" value="nature">
+                                <span><i class="fas fa-leaf"></i> Nature</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="hobbies" value="writing">
+                                <span><i class="fas fa-pen"></i> Writing</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="hobbies" value="movies">
+                                <span><i class="fas fa-film"></i> Movies</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="hobbies" value="meditation">
+                                <span><i class="fas fa-heart"></i> Meditation</span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customInterests">Other Interests</label>
+                            <textarea id="customInterests" name="customInterests" placeholder="Tell us about any other hobbies or interests..." rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Personality Quiz -->
+                <div class="form-step" data-step="4">
+                    <div class="step-header">
+                        <h2>Discover Your Personality 🧠</h2>
+                        <p>This quick quiz helps us understand you better for meaningful connections</p>
+                    </div>
+                    
+                    <div class="quiz-container">
+                        <div class="quiz-progress">
+                            <div class="quiz-progress-bar">
+                                <div class="quiz-progress-fill" id="quizProgressFill"></div>
+                            </div>
+                            <span class="quiz-counter">Question <span id="currentQuestion">1</span> of <span id="totalQuestions">10</span></span>
+                        </div>
+                        
+                        <div class="quiz-questions">
+                            <!-- Questions will be dynamically loaded -->
+                        </div>
+                        
+                        <div class="quiz-navigation">
+                            <button type="button" class="btn-secondary" id="prevQuestion" disabled>Previous</button>
+                            <button type="button" class="btn-primary" id="nextQuestion">Next</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5: Completion -->
+                <div class="form-step" data-step="5">
+                    <div class="step-header">
+                        <h2>You're all set! 🎉</h2>
+                        <p>Your personality profile has been created</p>
+                    </div>
+                    
+                    <div class="completion-content">
+                        <div class="personality-result" id="personalityResult">
+                            <!-- Personality result will be displayed here -->
+                        </div>
+                        
+                        <div class="welcome-message">
+                            <h3>Welcome to the SerenityLinks family! 💖</h3>
+                            <p>You're now ready to discover meaningful connections and join our supportive community.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="form-navigation">
+                    <button type="button" class="btn-secondary" id="prevStep" disabled>
+                        <i class="fas fa-arrow-left"></i> Previous
+                    </button>
+                    <button type="button" class="btn-primary" id="nextStep">
+                        Next <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button type="submit" class="btn-primary" id="submitForm" style="display: none;">
+                        <i class="fas fa-heart"></i> Complete Registration
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Support Message Template -->
+    <div class="support-template" id="supportTemplate" style="display: none;">
+        <div class="support-message">
+            <div class="support-icon">💙</div>
+            <div class="support-content">
+                <h4>We're here for you</h4>
+                <p>We noticed you might need some support. Remember, you're not alone in this journey.</p>
+                <div class="support-actions">
+                    <button class="btn-support" onclick="showSupportResources()">Get Support</button>
+                    <button class="btn-close" onclick="closeSupportMessage()">Thank you</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="register-script.js"></script>
+</body>
+</html>

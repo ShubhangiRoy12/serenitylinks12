@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Race - Speed Challenge</title>
+    <link rel="stylesheet" href="scrollrace.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Header -->
+        <header class="game-header">
+            <div class="header-content">
+                <h1><i class="fas fa-tachometer-alt"></i> Scroll Race</h1>
+                <p>Speed-based scrolling challenge - Reach 100% as fast as you can!</p>
+            </div>
+        </header>
+
+        <!-- Game Interface -->
+        <main class="game-main">
+            <!-- Game Stats -->
+            <div class="stats-panel">
+                <div class="stat-item">
+                    <i class="fas fa-percentage"></i>
+                    <span class="stat-label">Progress</span>
+                    <span class="stat-value" id="progressDisplay">0%</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-clock"></i>
+                    <span class="stat-label">Time</span>
+                    <span class="stat-value" id="timeDisplay">0.0s</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-star"></i>
+                    <span class="stat-label">Score</span>
+                    <span class="stat-value" id="scoreDisplay">0</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-bolt"></i>
+                    <span class="stat-label">Speed</span>
+                    <span class="stat-value" id="speedDisplay">0</span>
+                </div>
+            </div>
+
+            <!-- Race Track -->
+            <div class="race-container">
+                <div class="race-track" id="raceTrack">
+                    <!-- Start Line -->
+                    <div class="track-marker start-line">
+                        <i class="fas fa-flag"></i>
+                        <span>START</span>
+                    </div>
+                    
+                    <!-- Progress Markers -->
+                    <div class="track-marker progress-25">25%</div>
+                    <div class="track-marker progress-50">50%</div>
+                    <div class="track-marker progress-75">75%</div>
+                    
+                    <!-- Finish Line -->
+                    <div class="track-marker finish-line">
+                        <i class="fas fa-flag-checkered"></i>
+                        <span>FINISH</span>
+                    </div>
+                    
+                    <!-- Player -->
+                    <div class="race-player" id="racePlayer">
+                        <i class="fas fa-rocket"></i>
+                        <div class="player-trail"></div>
+                    </div>
+                    
+                    <!-- Progress Bar -->
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls Instructions -->
+            <div class="controls-panel">
+                <h3><i class="fas fa-gamepad"></i> Controls</h3>
+                <div class="control-methods">
+                    <div class="control-method">
+                        <i class="fas fa-computer-mouse"></i>
+                        <span>Mouse Wheel</span>
+                        <p>Scroll up/down to race</p>
+                    </div>
+                    <div class="control-method">
+                        <i class="fas fa-keyboard"></i>
+                        <span>Arrow Keys</span>
+                        <p>↑↓ or ←→ to move</p>
+                    </div>
+                    <div class="control-method">
+                        <i class="fas fa-hand-pointer"></i>
+                        <span>Spacebar</span>
+                        <p>Press repeatedly</p>
+                    </div>
+                    <div class="control-method">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Touch</span>
+                        <p>Tap the track rapidly</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Controls -->
+            <div class="game-controls">
+                <button class="btn btn-primary" id="startBtn">
+                    <i class="fas fa-play"></i> Start Race
+                </button>
+                <button class="btn btn-secondary" id="resetBtn">
+                    <i class="fas fa-redo"></i> Reset
+                </button>
+                <button class="btn btn-info" id="pauseBtn" disabled>
+                    <i class="fas fa-pause"></i> Pause
+                </button>
+            </div>
+
+            <!-- Achievement Display -->
+            <div class="achievements" id="achievements"></div>
+        </main>
+
+        <!-- Results Modal -->
+        <div class="modal" id="resultsModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2><i class="fas fa-trophy"></i> Race Complete!</h2>
+                    <span class="close" id="closeModal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="result-stats">
+                        <div class="result-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Time: <strong id="finalTime">0.0s</strong></span>
+                        </div>
+                        <div class="result-item">
+                            <i class="fas fa-star"></i>
+                            <span>Score: <strong id="finalScore">0</strong></span>
+                        </div>
+                        <div class="result-item">
+                            <i class="fas fa-medal"></i>
+                            <span>Rank: <strong id="finalRank">Beginner</strong></span>
+                        </div>
+                    </div>
+                    <div class="performance-message" id="performanceMessage">
+                        Great job! Keep practicing to improve your time.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" id="playAgainBtn">
+                        <i class="fas fa-redo"></i> Race Again
+                    </button>
+                    <button class="btn btn-secondary" id="shareBtn">
+                        <i class="fas fa-share"></i> Share Score
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scrollrace.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login - SerenityLinks</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="login-styles.css"/>
+</head>
+<body>
+
+    
+    <div class="login-bg">
+        <div class="login-card">
+            <div class="login-graphic">
+                <span class="graphic-heart">💖</span>
+            </div>
+            <h2 class="login-title">Welcome Back!</h2>
+            <p class="login-subtitle">Sign in to continue your journey of meaningful connections</p>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email" class="label-icon">
+                        <i class="fas fa-envelope"></i>
+                        Email Address
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                </div>
+                <div class="form-group">
+                    <label for="password" class="label-icon">
+                        <i class="fas fa-lock"></i>
+                        Password
+                    </label>
+                    <div class="password-field">
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required />
+                        <button type="button" class="toggle-password" tabindex="-1" onclick="togglePasswordVisibility()">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <button type="submit" class="btn-login">
+                    <i class="fas fa-sign-in-alt"></i> Sign In
+                </button>
+            </form>
+            <div class="social-divider">or</div>
+            <div class="social-login">
+                <button class="btn-social btn-google" type="button" onclick="loginGoogle()">
+                    <i class="fab fa-google"></i>
+                    Continue with Google
+                </button>
+                <button class="btn-social btn-facebook" type="button" onclick="loginFacebook()">
+                    <i class="fab fa-facebook-f"></i>
+                    Continue with Facebook
+                </button>
+            </div>
+            <div class="signup-footer">
+                New to SerenityLinks?
+                <a href="register.html">Create an account</a>
+            </div>
+        </div>
+        <!-- Optional Floating Graphics for background effect -->
+        <div class="floating-icons">
+            <span>🌸</span>
+            <span>✨</span>
+            <span>🦋</span>
+            <span>🌺</span>
+            <span>🌼</span>
+            <span>🌙</span>
+        </div>
+    </div>
+    <script>
+        function togglePasswordVisibility() {
+            const pwdInput = document.getElementById('password');
+            const icon = document.querySelector('.toggle-password i');
+            if (pwdInput.type === 'password') {
+                pwdInput.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                pwdInput.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+        function loginGoogle() {
+            window.location.href = 'https://accounts.google.com'; // Replace with your own logic
+        }
+        function loginFacebook() {
+            window.location.href = 'https://facebook.com'; // Replace with your own logic
+        }
+        document.getElementById('loginForm').addEventListener('submit', function(e){
+            e.preventDefault();
+            // Your login logic here
+            window.location.href = "homepage/homepage.html";
+        });
+    </script>
+</body>
+</html>

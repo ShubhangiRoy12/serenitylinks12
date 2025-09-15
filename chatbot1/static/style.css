@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Chat Container */
+.chat-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
+/* Chat Box */
+#chat-box {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+/* Input */
+.input-container {
+  display: flex;
+  border-top: 2px solid #eee;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.input-container button {
+  padding: 0 1rem;
+  border: none;
+  background: #ff80ab;
+  color: white;
+  cursor: pointer;
+}
+
+/* THEMES */
+body.theme-cozy {
+  background: linear-gradient(135deg, #ffe6f0, #ffd6eb);
+}
+
+body.theme-cozy .chat-container {
+  background: white url("https://i.imgur.com/Zv3qFvN.png") no-repeat bottom right;
+  background-size: 150px;
+}
+
+/* Pixel Cozy */
+body.theme-pixel {
+  background: #d9c3ff;
+  font-family: "Press Start 2P", cursive;
+}
+
+body.theme-pixel .chat-container {
+  background: #fff;
+  border: 3px solid #000;
+}
+
+/* Night Mode */
+body.theme-night {
+  background: #0d0d0d;
+  color: #0ff;
+}
+
+body.theme-night .chat-container {
+  background: #1a1a1a;
+  border: 2px solid #0ff;
+}
+
+/* Center everything */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Top bar with selectors */
+.top-bar {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.selectors label {
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+/* Chatbox wrapper centered */
+.chat-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.chat-container {
+  width: 100%;
+  max-width: 700px;
+  background: #fff0f5;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chat messages */
+.chat-box {
+  height: 400px;
+  overflow-y: auto;
+  border-radius: 15px;
+  padding: 10px;
+  background: white;
+  margin-bottom: 10px;
+}
+
+/* Input area */
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.input-container button {
+  background: #ff4da6;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.input-container button:hover {
+  background: #ff2d92;
+}
+
+/* Voice selector */
+.voice-toggle {
+  margin-top: 10px;
+  font-size: 14px;
+}

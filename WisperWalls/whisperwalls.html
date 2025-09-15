@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Body Language Hub - Whisper Walls</title>
+    <link rel="stylesheet" href="whisperwalls.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+
+<body>
+    <!-- Background Video -->
+    <video autoplay muted loop id="bgVideo">
+        <source src='../homepage/videos/background_home.mp4' type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Video Overlay -->
+    <div class="video-overlay"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heart"></i>
+                <span>SerenityLinks</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+                <a href="#" class="nav-link"><i class="fas fa-comment-dots"></i> Whisper Walls</a>
+                <a href="#" class="nav-link"><i class="fas fa-smile"></i> Friendship Hub</a>
+            </div>
+        </div>
+    </nav>
+    <section class="hero-section">
+        <h1 class="hero-title">Digital Body Language Hub</h1>
+        <p class="hero-subtitle">SHARE YOUR THOUGHTS ANONYMOUSLY AND DISCOVER THE BEAUTIFUL EMOTIONS OF OUR COMMUNITY</p>
+        <button class="cta-button" id="shareWhisperBtn"><i class="fas fa-plus"></i> Share a Whisper</button>
+    </section>
+    <div class="mood-filters">
+        <button class="mood-filter active" data-mood="all"><i class="fas fa-comments"></i> All</button>
+        <button class="mood-filter" data-mood="motivation"><i class="fas fa-bolt"></i> Motivation</button>
+        <button class="mood-filter" data-mood="lovely-feelings"><i class="fas fa-heart"></i> Lovely Feelings</button>
+        <button class="mood-filter" data-mood="happy"><i class="fas fa-smile"></i> Happy</button>
+        <button class="mood-filter" data-mood="sad"><i class="fas fa-frown"></i> Sad</button>
+        <button class="mood-filter" data-mood="excited"><i class="fas fa-star"></i> Excited</button>
+    </div>
+    <div class="whispers-grid" id="whispersGrid"></div>
+    <!-- Modal -->
+    <div class="modal" id="whisperModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-feather-alt"></i> Share Your Whisper</h3>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <textarea id="whisperText" placeholder="What's on your mind? Share your thoughts anonymously..." maxlength="280"></textarea>
+                <div class="char-count"><span id="charCount">0</span>/280</div>
+                <div class="mood-options">
+                    <button class="mood-option" data-mood="motivation"><i class="fas fa-bolt"></i> Motivation</button>
+                    <button class="mood-option" data-mood="lovely-feelings"><i class="fas fa-heart"></i> Lovely Feelings</button>
+                    <button class="mood-option" data-mood="happy"><i class="fas fa-smile"></i> Happy</button>
+                    <button class="mood-option" data-mood="sad"><i class="fas fa-frown"></i> Sad</button>
+                    <button class="mood-option" data-mood="excited"><i class="fas fa-star"></i> Excited</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="cancelWhisper">Cancel</button>
+                <button class="btn-primary" id="submitWhisper"><i class="fas fa-paper-plane"></i> Share Whisper</button>
+            </div>
+        </div>
+    </div>
+    <div class="toast-container" id="toastContainer"></div>
+    <script src="whisperwalls.js"></script>
+</body>
+</html>

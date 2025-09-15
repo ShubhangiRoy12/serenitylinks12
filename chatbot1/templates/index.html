@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Friendship & Relationship Chatbot</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body class="theme-cozy">
+  <div class="theme-selector">
+    <label>Theme:
+      <select id="themeSelect">
+        <option value="cozy">Original Cozy</option>
+        <option value="pixel">Pixel Cozy</option>
+        <option value="night">Night Mode</option>
+      </select>
+    </label>
+    <label>Persona:
+      <select id="personaSelect">
+        <option value="friend">Friend</option>
+        <option value="romantic">Romantic Partner</option>
+        <option value="mentor">Mentor</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="chat-container">
+    <div id="chat-box"></div>
+    <div class="input-container">
+      <input id="user-input" placeholder="Type a message..." />
+      <button onclick="sendMessage()">Send</button>
+      <button onclick="startVoice()">🎤</button>
+    </div>
+    <div class="voice-toggle">
+      Voice:
+      <select id="voiceSelect">
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Background Audio (one per theme) -->
+  <audio id="audio-cozy" loop src="/static/sounds/cozy.mp3"></audio>
+  <audio id="audio-pixel" loop src="/static/sounds/pixel.mp3"></audio>
+  <audio id="audio-night" loop src="/static/sounds/night.mp3"></audio>
+
+  <script src="/static/script.js"></script>
+</body>
+
+</html>

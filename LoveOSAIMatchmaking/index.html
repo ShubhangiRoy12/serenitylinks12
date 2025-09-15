@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LoveOS & AI Matchmaking</title>
+  <meta name="description" content="Find your perfect match with LoveOS & AI Matchmaking. Safe, smart, and fun!">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+     <!-- Background Video -->
+    <video autoplay muted loop id="bgVideo">
+        <source src='../homepage/videos/background_home.mp4' type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Video Overlay -->
+    <div class="video-overlay"></div>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>💖 LoveOS & AI Matchmaking</h1>
+      <p class="lead">Find your soulmate with the power of AI.<br>
+        Safe, smart, and fun matchmaking for real connections.</p>
+      <button class="btn" id="getStartedBtn">Get Started</button>
+    </div>
+  </header>
+
+  <section class="stats-section">
+    <div class="stat-card">
+      <div class="stat-icon">🤖</div>
+      <div class="stat-number">98%</div>
+      <div class="stat-label">AI Match Accuracy</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">💬</div>
+      <div class="stat-number">12K+</div>
+      <div class="stat-label">Chats Started</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">🌍</div>
+      <div class="stat-number">42</div>
+      <div class="stat-label">Countries</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">💍</div>
+      <div class="stat-number">1,200+</div>
+      <div class="stat-label">Happy Couples</div>
+    </div>
+  </section>
+
+  <main>
+    <section class="features-section">
+      <h2>Why LoveOS?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🔎</div>
+          <h3>Smart Matchmaking</h3>
+          <p>AI analyzes interests, values, and personality for the best matches.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>Privacy & Safety</h3>
+          <p>End-to-end encrypted chats and AI moderation for a safe experience.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎉</div>
+          <h3>Fun Icebreakers</h3>
+          <p>Games, quizzes, and prompts to make starting conversations easy.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌈</div>
+          <h3>Inclusive Community</h3>
+          <p>Open to all backgrounds, orientations, and cultures.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="matchmaking-section" id="matchmaking">
+      <h2>Try AI Matchmaking</h2>
+      <form id="matchForm" class="match-form" autocomplete="off">
+        <label>
+          Your Name
+          <input type="text" id="userName" required>
+        </label>
+        <label>
+          Your Interests
+          <input type="text" id="userInterests" placeholder="e.g. music, travel, tech" required>
+        </label>
+        <label>
+          Looking For
+          <select id="userLookingFor" required>
+            <option value="">Select…</option>
+            <option value="friendship">Friendship</option>
+            <option value="dating">Dating</option>
+            <option value="longterm">Long-term</option>
+          </select>
+        </label>
+        <button type="submit" class="btn">Find My Match</button>
+      </form>
+      <div id="matchResult" class="match-result"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <span>Made with 💗 by LoveOS Team</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

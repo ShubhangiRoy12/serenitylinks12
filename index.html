@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SerenityLinks - Your Cozy Digital Bond Space</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated background elements -->
+    <div class="floating-hearts">
+        <div class="heart">💖</div>
+        <div class="heart">🌸</div>
+        <div class="heart">🦋</div>
+        <div class="heart">💕</div>
+        <div class="heart">🌺</div>
+        <div class="heart">✨</div>
+        <div class="heart">🌙</div>
+        <div class="heart">🌼</div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <nav class="nav">
+                <div class="logo">
+                    <i class="fas fa-heart"></i>
+                    <span>SerenityLinks</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <main class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">SerenityLinks</span>
+                    </h1>
+                    <p class="hero-subtitle">The Warmth of Digital Bonds</p>
+                    <p class="hero-description">
+                        Your Cozy Space Where Emotions Bond and Joy Feels at Home
+                    </p>
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <i class="fas fa-heart-pulse"></i>
+                            <span>Digital Body Language Analysis</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-users"></i>
+                            <span>Meaningful Connections</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-heart"></i>
+                            <span>Safe & Supportive Community</span>
+                        </div>
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="register.html" class="btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            Get Started
+                        </a>
+                        <button class="btn-secondary" onclick="learnMore()">
+                            <i class="fas fa-play-circle"></i>
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-illustration">
+                    <div class="illustration-container">
+                        <div class="love-couple">
+                            <div class="person person-1">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="connection-line"></div>
+                            <div class="person person-2">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="floating-emoji">💫</div>
+                            <div class="floating-emoji">💝</div>
+                            <div class="floating-emoji">🌟</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Login Modal -->
+        <div class="modal-overlay" id="loginModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Welcome Back 💖</h2>
+                    <button class="close-btn" onclick="hideLogin()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <form class="login-form" id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn-login">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Login
+                    </button>
+                    <p class="signup-link">
+                        New here? <a href="#" onclick="showSignup()">Sign up</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Signup Modal -->
+        <div class="modal-overlay" id="signupModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Join Our Cozy Community 🌸</h2>
+                    <button class="close-btn" onclick="hideSignup()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <form class="login-form" id="signupForm">
+                    <div class="form-group">
+                        <label for="signupName">Full Name</label>
+                        <input type="text" id="signupName" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupEmail">Email</label>
+                        <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword" placeholder="Create a password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                    </div>
+                    <button type="submit" class="btn-login">
+                        <i class="fas fa-user-plus"></i>
+                        Sign Up
+                    </button>
+                    <p class="signup-link">
+                        Already have an account? <a href="#" onclick="showLogin()">Login</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 SerenityLinks. Made with 💖 for meaningful connections.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-heart"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
